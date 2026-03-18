@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Navbar() {
   return (
-    <nav className="bg-white rounded-full shadow-md  border-1 border-black relative w-full overflow-hidden">
+    <nav className="bg-white rounded-full shadow-md border-1 border-black relative w-full overflow-hidden fixed top-0 z-50">
       <div className="max-w-6xl mx-auto grid grid-cols-2 items-center p-3 px-6">
 
         {/* LEFT - LOGO */}
