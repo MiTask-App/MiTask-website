@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function FeatureSection() {
   return (
-    <section className="py-24">
+    <section id="features" className="py-24">
 
       {/* TITLE */}
       <h2 className="text-center text-4xl font-bold mb-16">

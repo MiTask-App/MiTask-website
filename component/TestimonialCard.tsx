@@ -10,7 +10,7 @@ interface TestimonialProps {
 
 export const TestimonialCard = ({ name, role, content, imageSrc }: TestimonialProps) => {
   return (
-    <div className="flex flex-col w-[350px] shrink-0">
+    <div id="testimoni" className="flex flex-col w-[350px] shrink-0">
       {/* Bubble Chat Area */}
       <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 relative mb-6 min-h-[180px] flex items-center justify-center text-center">
         <p className="text-gray-800 text-lg font-medium leading-relaxed">

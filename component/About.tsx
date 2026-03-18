@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Productivity() {
   return (
-    <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8 py-20 ">
+    <section id="about" className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8 py-20 ">
 
       {/* TEXT AREA */}
       <div className="space-y-4 pl-30">

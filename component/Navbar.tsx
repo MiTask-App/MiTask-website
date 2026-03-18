@@ -1,30 +1,26 @@
-import Image from "next/image"
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="bg-white rounded-full shadow-md border-1 border-black relative w-full overflow-hidden fixed top-0 z-50">
+    <nav className="bg-white/80 backdrop-blur-md rounded-full shadow-md border border-black fixed top-0 w-full z-50">
       <div className="max-w-6xl mx-auto grid grid-cols-2 items-center p-3 px-6">
 
-        {/* LEFT - LOGO */}
+        {/* LOGO */}
         <div className="flex items-center gap-2">
-          <Image
-            src="/logo.svg"
-            alt="MiTask Logo"
-            width={40}
-            height={40}
-          />
+          <Image src="/logo.svg" alt="MiTask Logo" width={40} height={40} />
           <span className="font-bold text-lg">MiTask</span>
         </div>
 
-        {/* CENTER - MENU */}
+        {/* MENU */}
         <div className="flex justify-end gap-8 text-sm font-medium">
-          <a href="#">Tentang</a>
-          <a href="#">Fitur</a>
-          <a href="#">Ulasan</a>
-          <a href="#"><img src="/icons/pajamas_hamburger.svg" alt="hamburger" width={20} height={20}/></a>
+          <Link href="#about">Tentang</Link>
+          <Link href="#features">Fitur</Link>
+          <Link href="#testimoni">Ulasan</Link>
+          <Image src="/icons/pajamas_hamburger.svg" alt="menu" width={20} height={20} />
         </div>
 
       </div>
     </nav>
-  )
+  );
 }

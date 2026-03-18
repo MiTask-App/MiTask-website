@@ -7,12 +7,23 @@ import Footer from "@/component/Footter"
 
 export default function Home() {
   return (
-    <main>
+    <main className="pt-20">
       <Navbar />
-      <About />
+
+      <section id="about">
+        <About />
+      </section>
+
       <Hero />
-      <Features />
-      <Testimoni />
+
+      <section id="features">
+        <Features />
+      </section>
+
+      <section id="testimoni">
+        <Testimoni />
+      </section>
+
       <Footer />
     </main>
   )
