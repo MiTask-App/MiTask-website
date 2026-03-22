@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function FeatureSection() {
   return (
-    <section id="features" className="py-24">
+    <section id="features" className="py-24 ">
 
       {/* TITLE */}
       <h2 className="text-center text-4xl font-bold mb-16">
@@ -10,7 +10,7 @@ export default function FeatureSection() {
       </h2>
 
       {/* CARD CONTAINER */}
-      <div className="relative max-w-5xl mx-auto bg-blue-100 rounded-3xl p-25 shadow-lg">
+      <div className="relative max-w-5xl mx-auto rounded-3xl p-25 shadow-lg bg-gradient-to-b from-[#B7D8EA] to-white">
 
         {/* ARROW LEFT */}
         <button className="absolute left-4 top-1/2 -translate-y-1/2 text-3xl">
@@ -27,6 +27,7 @@ export default function FeatureSection() {
               alt="feature"
               width={220}
               height={400}
+              className="h-50 w-auto"
             />
           </div>
 

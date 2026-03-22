@@ -17,12 +17,7 @@ const data = [
 
 export default function TestimonialSection() {
   return (
-    <section className="relative py-20 bg-slate-50 overflow-hidden">
-      {/* Background Grid Pattern */}
-      <div className="absolute inset-0 z-0 opacity-20" 
-           style={{ backgroundImage: 'linear-gradient(#e5e7eb 1px, transparent 1px), linear-gradient(90deg, #e5e7eb 1px, transparent 1px)' }}>
-      </div>
-
+    <section className="relative py-20  overflow-hidden bg-[#EBF5F7]">
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
