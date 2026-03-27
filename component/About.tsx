@@ -5,7 +5,7 @@ export default function Productivity() {
     <section id="about" className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8 py-20 ">
 
       {/* TEXT AREA */}
-      <div className="space-y-4 pl-30">
+      <div className="space-y-4 pl pl-10 md:pl-30 pr pr-10 md:pr-5">
 
         <h2 className="text-3xl font-bold leading-snug">
           Kelola Waktu <br />
@@ -13,7 +13,7 @@ export default function Productivity() {
           Lebih <span className="text-blue-500">Efektif</span>
         </h2>
 
-        <p className="text-gray-500 text-sm max-w-md">
+        <p className="text-gray-500 text-sm max-w-md text-justify">
           Tingkatkan produktivitas hingga 3x lipat dengan MiTask,
           aplikasi time management yang membantu mengatur
           tugas dan capai target anda dengan mudah.
@@ -28,7 +28,7 @@ export default function Productivity() {
       {/* IMAGE AREA */}
       <div className="flex justify-center grid grid-cols-1 md:grid-cols-1 pl-10">
         <img
-          src="/about.svg"
+          src="/about1.svg"
           alt="MiTask devices"
           className="w-full h-auto rounded-lg"
           width={450}

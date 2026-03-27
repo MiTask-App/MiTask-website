@@ -8,12 +8,12 @@ export default function Navbar() {
 
         {/* LOGO */}
         <div className="flex items-center gap-2">
-          <Image src="/logo.svg" alt="MiTask Logo" width={40} height={40} className="h-7 w-auto" />
+          <Image src="/logo.svg" alt="MiTask Logo" width={40} height={40} />
           <span className="font-bold text-auto">MiTask</span>
         </div>
 
         {/* MENU */}
-        <div className="flex justify-end gap gap-4 md:gap-8 text-sm font-medium">
+        <div className="flex justify-end gap gap-4 md:gap-9 text text-sm md:text-lg font-medium">
           <Link href="#about">Tentang</Link>
           <Link href="#features">Fitur</Link>
           <Link href="#testimoni">Ulasan</Link>

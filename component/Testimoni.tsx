@@ -11,7 +11,7 @@ const data = [
     name: "Egy",
     role: "Mahasiswa Teknik Informatika",
     content: "App nya bagus sekali, fiturnya sangat membantu saya",
-    image: "/about.svg" 
+    image: "/testimoni2.jpeg" 
   },
 ];
 
@@ -24,7 +24,7 @@ export default function TestimonialSection() {
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
             Apa kata mereka??
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-600 text text-sm md:text-lg max-w-2xl mx-auto leading-relaxed">
             Nggak perlu pusing lagi ngatur jadwal. Yuk, intip pengalaman seru para pengguna yang sudah membuktikan kemudahan MiTask.
           </p>
         </div>

@@ -2,17 +2,17 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-[80vh] text-center">
+    <section className="relative overflow-hidden flex flex-col items-center justify-center min-h-[80vh] text-center">
       {/* BACKGROUND BLOB  kiri*/}
       <img
         src="/hero kiri.svg"
-        className="absolute bottom-0 w-[40%] max-w-[320px] -left-10 md:-left-20 pointer-events-none select-none"
+        className="absolute bottom-0 w-[40%] max-w-[280px] -left-10 md:-left-20 pointer-events-none select-none"
       />
 
       {/* BACKGROUND BLOB  kanan*/}
       <img
         src="/hero kanan.svg"
-        className="absolute bottom-0 w-[40%] max-w-[320px] -right-10 md:-right-20 pointer-events-none select-none"
+        className="absolute bottom-0 w-[40%] max-w-[280px] -right-10 md:-right-20 pointer-events-none select-none"
       />
       <div className="relative space-y-6 justify-center py-15">
         {/* RENCANAKAN */}
@@ -44,7 +44,7 @@ export default function Hero() {
             />
           </div>
           <h1 className="text-3xl font-bold">
-            Tun<span className="text-blue-500">Task</span>an
+            Tun<span className="text-[#2c3d8f]">Task</span>an
           </h1>
         </div>
       </div>
