@@ -30,9 +30,9 @@ export default function TestimonialSection() {
         </div>
 
         {/* Horizontal Scroll Container */}
-        <div className="flex gap-8 overflow-x-auto pb-8 snap-x no-scrollbar  ">
+        <div className="flex gap-8 overflow-x-auto pb-8 snap-x">
           {[...data, ...data, ...data].map((item, index) => (
-            <div key={index} className="snap-center">
+            <div key={index} className="animation-scroll">
               <TestimonialCard 
                 name={item.name}
                 role={item.role}
