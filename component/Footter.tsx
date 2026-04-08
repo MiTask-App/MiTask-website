@@ -10,12 +10,12 @@ export default function Footer() {
           {/* Bagian Kiri: Logo & Slogan */}
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-3">
-              {/* Ganti src dengan logo MiTask yang sesuai */}
+              {/* logo mitask */}
                  <img src="/footter.svg" alt="logo mitask" width={40} height={40} />
               <span className="text-2xl font-bold tracking-tight">MiTask</span>
             </div>
 
-            {/* Divider Vertikal & Slogan (Hidden on mobile if needed) */}
+        
             <div className="hidden sm:block h-12 w-[1px] bg-white/30 mx-2"></div>
             
             <div className="hidden sm:block text-sm leading-tight text-white/90">
@@ -25,17 +25,17 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Bagian Tengah: Copyright */}
+          {/* Copyright */}
           <div className="text-sm text-white/80 font-light">
-            © 2025 MiTask. All rights reserved.
+            © 2026 MiTask. All rights reserved.
           </div>
 
-          {/* Bagian Kanan: Links */}
+          {/* Links term & privacy */}
           <div className="flex items-center gap-8 text-sm font-medium">
-            <Link href="/term" className="hover:text-gray-300 transition-colors">
+            <p className="hover:text-gray-300 transition-colors">
               Term
-            </Link>
-            <Link href="/privacy" className="hover:text-gray-300 transition-colors">
+            </p>
+            <Link href="https://github.com/MiTask-App/MiTask-privacy-policy/blob/main/index.md" className="hover:text-gray-300 transition-colors">
               Privacy
             </Link>
           </div>

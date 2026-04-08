@@ -23,7 +23,7 @@ export default function FeatureSection() {
           {/* IMAGE */}
           <div className="flex justify-center">
             <Image
-              src="fitur.svg"
+              src="fitur1.svg"
               alt="feature"
               width={220}
               height={400}
@@ -33,11 +33,11 @@ export default function FeatureSection() {
 
           {/* TEXT */}
           <div>
-            <h3 className="text-2xl font-bold mb-3">
+            <h3 className="text-2xl font-bold mb-3 text-center">
               List Task by Deadline
             </h3>
 
-            <p className="text-gray-600">
+            <p className="text-gray-600 text text-sm md:text-lg text-justify">
               Urutkan tugas berdasarkan deadline terdekat.
               Tidak ada lagi tugas yang terlewat atau
               dikerjakan mendadak.

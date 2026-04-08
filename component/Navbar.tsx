@@ -3,7 +3,8 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="bg-white/80 backdrop-blur-md rounded-full shadow-md border border-black fixed top-0 w-full z-50">
+    <div className="mt-5">
+      <nav className="bg-white/80 backdrop-blur-md rounded-full shadow-md border border-black fixed top-0 w-full z-50 mt-2">
       <div className="max-w-6xl mx-auto grid grid-cols-2 items-center p-3 px-6">
 
         {/* LOGO */}
@@ -17,10 +18,11 @@ export default function Navbar() {
           <Link href="#about">Tentang</Link>
           <Link href="#features">Fitur</Link>
           <Link href="#testimoni">Ulasan</Link>
-          <Image src="/icons/pajamas_hamburger.svg" alt="menu" width={20} height={20} />
+          {/* <Image src="/icons/pajamas_hamburger.svg" alt="menu" width={20} height={20} /> */}
         </div>
 
       </div>
     </nav>
+    </div>
   );
 }
