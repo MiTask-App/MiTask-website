@@ -1,77 +1,92 @@
-'use client'
+"use client";
 
-import { useEffect, useState } from 'react'
-import { supabase } from '@/lib/supabase'
-import { useRouter } from 'next/navigation'
+import { useEffect, useState } from "react";
+import { supabase } from "@/lib/supabase";
+import { useRouter } from "next/navigation";
 
 interface Task {
-  id: number
-  title: string
-  description: string
-  deadline: string
-  is_done: boolean
-  created_at: string
+  id: number;
+  title: string;
+  description: string;
+  deadline: string;
+  is_done: boolean;
+  created_at: string;
 }
 
 export default function DashboardPage() {
-  const router = useRouter()
-  const [tasks, setTasks] = useState<Task[]>([])
-  const [loading, setLoading] = useState(true)
-  const [userName, setUserName] = useState('')
+  const router = useRouter();
+  const [tasks, setTasks] = useState<Task[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [userName, setUserName] = useState("");
 
-  useEffect(() => {
+ useEffect(() => {
+    let channel: any;
+
     const init = async () => {
-      const { data: { session } } = await supabase.auth.getSession()
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
 
       if (!session) {
-        router.push('/login')
-        return
+        router.push("/login");
+        return;
       }
 
-      setUserName(session.user.email || '')
-      await fetchTasks(session.access_token)
+      setUserName(session.user.email || "");
+      await fetchTasks(session.access_token);
 
-      // Setup real-time subscription ke perubahan di tabel tasks
-      const channel = supabase
-        .channel('tasks-changes')
-        .on('postgres_changes', {
-          event: '*',
-          schema: 'public',
-          table: 'tasks',
-        }, () => {
-          fetchTasks(session.access_token)
-        })
-        .subscribe()
-        // Setup real-time subscription ke perubahan di tabel tasks
+      await supabase.removeAllChannels();
 
-      return () => supabase.removeChannel(channel)
-    }
+      channel = supabase.channel("tasks-changes");
 
-    init()
-  }, [])
+      channel.on(
+        "postgres_changes",
+        {
+          event: "*",
+          schema: "public",
+          table: "tasks",
+        },
+        () => {
+          fetchTasks(session.access_token);
+        },
+      );
+
+      channel.subscribe();
+    };
+
+    init();
+
+    return () => {
+      if (channel) supabase.removeChannel(channel);
+    };
+  }, []);
 
   //meminta task ke laravel dengan token supabase sebagai otentikasi
   const fetchTasks = async (token: string) => {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_LARAVEL_URL}/api/tasks`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_LARAVEL_URL}/api/tasks`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
       },
-    })
-    const json = await res.json()
-    setTasks(json.data || [])
-    setLoading(false)
-  }
+    );
+    const json = await res.json();
+    setTasks(json.data || []);
+    setLoading(false);
+  };
 
   const handleLogout = async () => {
-    await supabase.auth.signOut()
-    router.push('/login')
-  }
+    await supabase.auth.signOut();
+    router.push("/login");
+  };
 
-  if (loading) return (
-    <div className="min-h-screen flex items-center justify-center">
-      <p>Memuat task...</p>
-    </div>
-  )
+  if (loading)
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p>Memuat task...</p>
+      </div>
+    );
 
   return (
     <div className="min-h-screen bg-gray-50 p-6">
@@ -100,19 +115,24 @@ export default function DashboardPage() {
                 <div className="flex justify-between items-start">
                   <div>
                     <h2 className="font-semibold text-lg">{task.title}</h2>
-                    <p className="text-gray-500 text-sm mt-1">{task.description}</p>
+                    <p className="text-gray-500 text-sm mt-1">
+                      {task.description}
+                    </p>
                     {task.deadline && (
                       <p className="text-gray-400 text-xs mt-2">
-                        Deadline: {new Date(task.deadline).toLocaleDateString('id-ID')}
+                        Deadline:{" "}
+                        {new Date(task.deadline).toLocaleDateString("id-ID")}
                       </p>
                     )}
                   </div>
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                    task.is_done
-                      ? 'bg-green-100 text-green-700'
-                      : 'bg-yellow-100 text-yellow-700'
-                  }`}>
-                    {task.is_done ? 'Selesai' : 'Belum selesai'}
+                  <span
+                    className={`px-3 py-1 rounded-full text-xs font-medium ${
+                      task.is_done
+                        ? "bg-green-100 text-green-700"
+                        : "bg-yellow-100 text-yellow-700"
+                    }`}
+                  >
+                    {task.is_done ? "Selesai" : "Belum selesai"}
                   </span>
                 </div>
               </div>
@@ -121,5 +141,5 @@ export default function DashboardPage() {
         )}
       </div>
     </div>
-  )
+  );
 }
