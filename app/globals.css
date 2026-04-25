@@ -7,17 +7,21 @@ body {
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
 @keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50%)); } 
 }
 
-.animation-scroll {
-  animation: scroll 10s linear infinite;
+.animate-infinite-scroll {
+  display: flex;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+/* Pause saat mouse diletakkan di atas kartu */
+.animate-infinite-scroll:hover {
+  animation-play-state: paused;
 }

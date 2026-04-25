@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 export default function Productivity() {
   return (
@@ -19,10 +20,11 @@ export default function Productivity() {
           tugas dan capai target anda dengan mudah.
         </p>
 
-
-        <button className="mt-4 flex items-center gap-2 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md">
+        <Link href="https://play.google.com/store/apps/details?id=com.mitask.app" target="_blank">
+        <button className="mt-4 flex items-center gap-2 bg-[#5A81FA] text-black px-4 py-2 rounded-lg shadow-md">
           <img src="/icons/playstore.svg" alt="playstore" /> Google Play
         </button>
+        </Link>
       </div>
 
       {/* IMAGE AREA */}

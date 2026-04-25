@@ -3,9 +3,9 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="w-full px-4 mb-4">
-      <div className="bg-[#3b558d] text-white rounded-t-[40px] px-8 py-6 md:px-15 md:py-10">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
+    <footer className="w-full">
+      <div className="bg-[#5A81FA] text-white rounded-t-[40px] px-4 py-3 md:px-15 md:py-10">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
           
           {/* Bagian Kiri: Logo & Slogan */}
           <div className="flex items-center gap-6">

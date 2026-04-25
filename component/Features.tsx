@@ -2,62 +2,62 @@ import Image from "next/image"
 
 export default function FeatureSection() {
   return (
-    <section id="features" className="py-24 ">
+    <section id="features" className="py-20 px-6 bg-gray-50/50">
+      
+      <div className="max-w-2xl mx-auto mb-16">
+        <h2 className="text-center text-3xl md:text-4xl font-bold mb-4 text-slate-900">
+          Fitur Unggulan Kami
+        </h2>
+      </div>
 
-      {/* TITLE */}
-      <h2 className="text-center text-4xl font-bold mb-16">
-        Fitur Unggulan Kami
-      </h2>
-
-      {/* CARD CONTAINER */}
-      <div className="relative max-w-5xl mx-auto rounded-3xl p-25 shadow-lg bg-gradient-to-b from-[#B7D8EA] to-white">
-
-        {/* ARROW LEFT */}
-        <button className="absolute left-4 top-1/2 -translate-y-1/2 text-3xl">
-          ‹
+      {/* Kontainer diperkecil dari max-w-5xl ke max-w-4xl agar tidak terlalu lebar */}
+      <div className="relative max-w-4xl mx-auto rounded-[2.5rem] overflow-hidden shadow-2xl bg-gradient-to-br from-[#D8E9F3] via-[#E6F2F8] to-white border border-white">
+        
+        {/* Navigasi Panah (Samping) */}
+        <button className="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 flex items-center justify-center bg-white rounded-full shadow-lg text-blue-600 hover:scale-110 transition-transform">
+          <span className="text-2xl font-bold">‹</span>
         </button>
 
-        {/* CONTENT */}
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
-
-          {/* IMAGE */}
-          <div className="flex justify-center">
-            <Image
-              src="fitur1.svg"
-              alt="feature"
-              width={220}
-              height={400}
-              className="h-50 w-auto"
-            />
+        <div className="relative flex flex-col md:flex-row items-center justify-between p-10 md:p-20 gap-12">
+          
+          {/* Sisi Gambar - Diberi skala agar proporsional */}
+          <div className="w-full md:w-[45%] flex justify-center">
+            <div className="relative">
+              {/* Dekorasi Glow di belakang hp */}
+              <div className="absolute inset-0 bg-blue-200/30 blur-3xl rounded-full"></div>
+              <Image
+                src="/fitur1.svg" 
+                alt="feature"
+                width={200}
+                height={400}
+                className="relative z-10 h-auto w-[180px] md:w-[240px] drop-shadow-2xl transform md:-rotate-2"
+              />
+            </div>
           </div>
 
-          {/* TEXT */}
-          <div>
-            <h3 className="text-2xl font-bold mb-3 text-center">
+          {/* Sisi Teks - Diberi lebar maksimal agar rapi */}
+          <div className="w-full md:w-[55%] text-center md:text-left">
+            <h3 className="text-2xl md:text-4xl font-bold mb-6 text-slate-800 leading-tight">
               List Task by Deadline
             </h3>
-
-            <p className="text-gray-600 text text-sm md:text-lg text-justify">
-              Urutkan tugas berdasarkan deadline terdekat.
-              Tidak ada lagi tugas yang terlewat atau
-              dikerjakan mendadak.
+            <p className="text-gray-600 text-base md:text-xl leading-relaxed opacity-90">
+              Urutkan tugas berdasarkan deadline terdekat. 
+              Tidak ada lagi tugas yang terlewat atau dikerjakan mendadak.
             </p>
           </div>
 
         </div>
 
-        {/* ARROW RIGHT */}
-        <button className="absolute right-4 top-1/2 -translate-y-1/2 text-3xl">
-          ›
+        <button className="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 flex items-center justify-center bg-white rounded-full shadow-lg text-blue-600 hover:scale-110 transition-transform">
+          <span className="text-2xl font-bold">›</span>
         </button>
-
       </div>
 
-      {/* INDICATOR */}
-      <div className="flex justify-center mt-8 gap-3">
-        <span className="w-8 h-3 bg-blue-500 rounded-full"></span>
-        <span className="w-3 h-3 bg-gray-300 rounded-full"></span>
-        <span className="w-3 h-3 bg-gray-300 rounded-full"></span>
+      {/* Indikator Bawah */}
+      <div className="flex justify-center mt-12 gap-3">
+        <div className="w-10 h-2 bg-blue-500 rounded-full transition-all"></div>
+        <div className="w-2 h-2 bg-gray-300 rounded-full transition-all"></div>
+        <div className="w-2 h-2 bg-gray-300 rounded-full transition-all"></div>
       </div>
 
     </section>
