@@ -8,7 +8,7 @@ export default function Productivity() {
       {/* TEXT AREA */}
       <div className="space-y-4 pl pl-10 md:pl-30 pr pr-10 md:pr-5">
 
-        <h2 className="text-3xl font-bold leading-snug">
+        <h2 className="text text-3xl md:text-5xl font-bold leading-snug">
           Kelola Waktu <br />
           Anda dengan <br />
           Lebih <span className="text-blue-500">Efektif</span>

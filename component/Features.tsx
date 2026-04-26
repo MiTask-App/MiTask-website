@@ -11,7 +11,7 @@ export default function FeatureSection() {
       </div>
 
       {/* Kontainer diperkecil dari max-w-5xl ke max-w-4xl agar tidak terlalu lebar */}
-      <div className="relative max-w-4xl mx-auto rounded-[2.5rem] overflow-hidden shadow-2xl bg-gradient-to-br from-[#D8E9F3] via-[#E6F2F8] to-white border border-white">
+      <div className="relative max-w-4xl mx-auto rounded-[2.5rem] overflow-hidden shadow-2xl bg-white border border-white">
         
         {/* Navigasi Panah (Samping) */}
         <button className="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 flex items-center justify-center bg-white rounded-full shadow-lg text-blue-600 hover:scale-110 transition-transform">
@@ -24,13 +24,13 @@ export default function FeatureSection() {
           <div className="w-full md:w-[45%] flex justify-center">
             <div className="relative">
               {/* Dekorasi Glow di belakang hp */}
-              <div className="absolute inset-0 bg-blue-200/30 blur-3xl rounded-full"></div>
+              <div className="absolute inset-0 blur-3xl rounded-full"></div>
               <Image
-                src="/fitur1.svg" 
+                src="/fitur_2.svg" 
                 alt="feature"
-                width={200}
-                height={400}
-                className="relative z-10 h-auto w-[180px] md:w-[240px] drop-shadow-2xl transform md:-rotate-2"
+                width={300}
+                height={500}
+                className="relative z-10 h-auto w-[180px] md:w-[600px] drop-shadow-2xl transform md:-rotate-2"
               />
             </div>
           </div>
@@ -40,7 +40,7 @@ export default function FeatureSection() {
             <h3 className="text-2xl md:text-4xl font-bold mb-6 text-slate-800 leading-tight">
               List Task by Deadline
             </h3>
-            <p className="text-gray-600 text-base md:text-xl leading-relaxed opacity-90">
+            <p className="text-gray-500 text-base md:text-xl leading-relaxed opacity-90">
               Urutkan tugas berdasarkan deadline terdekat. 
               Tidak ada lagi tugas yang terlewat atau dikerjakan mendadak.
             </p>

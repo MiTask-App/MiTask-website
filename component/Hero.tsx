@@ -17,7 +17,7 @@ export default function Hero() {
         className="absolute top-0 right-0 w-[45%] max-w-[300px] pointer-events-none select-none z-10"
       />
 
-      <div className="relative z-20 flex flex-col items-center max-w-6xl w-full">
+      <div className="relative z-20 flex flex-col items-center max-w-7xl w-full">
         
         {/* Container text*/}
         <div className="flex flex-col items-start space-y-8 relative">
