@@ -67,11 +67,6 @@ export default function Hero() {
         </div>
 
       </div>
-
-      {/* BACKGROUND PATTERN (Icon-icon kecil di latar belakang) */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none -z-10" 
-           style={{ backgroundImage: `url('/pattern.png')`, backgroundSize: '100px' }}>
-      </div>
     </section>
   );
 }
