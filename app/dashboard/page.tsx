@@ -147,8 +147,12 @@ export default function DashboardPage() {
 
       if (scoreA === scoreB) {
         // Jika score sama, urutkan deadline terdekat dulu
-        const deadlineA = a.deadline ? new Date(a.deadline).getTime() : Infinity;
-        const deadlineB = b.deadline ? new Date(b.deadline).getTime() : Infinity;
+        const deadlineA = a.deadline
+          ? new Date(a.deadline).getTime()
+          : Infinity;
+        const deadlineB = b.deadline
+          ? new Date(b.deadline).getTime()
+          : Infinity;
         return deadlineA - deadlineB;
       }
 
@@ -175,7 +179,6 @@ export default function DashboardPage() {
   return (
     <div className="min-h-screen bg-gray-50 p-6">
       <div className="max-w-4xl mx-auto">
-
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <div>
@@ -207,10 +210,11 @@ export default function DashboardPage() {
                 >
                   <div className="flex justify-between items-start">
                     <div className="flex-1">
-
                       {/* Badge kategori + flag warna */}
                       <div className="flex items-center gap-2 mb-2">
-                        <span className={`text-base ${category.flagColor}`}>⚑</span>
+                        <span className={`text-base ${category.flagColor}`}>
+                          ⚑
+                        </span>
                         <span
                           className={`px-2 py-0.5 rounded-full text-xs font-medium ${category.color}`}
                         >
