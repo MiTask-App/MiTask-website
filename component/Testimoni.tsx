@@ -16,28 +16,26 @@ const data = [
 ];
 
 export default function TestimonialSection() {
-  // Duplikasi data agar tidak ada celah kosong saat looping
-  const duplicatedData = [...data, ...data, ...data, ...data];
+  const duplicatedData = [...data, ...data, ...data, ...data, ...data];
 
   return (
-    <section className="relative py-20 overflow-hidden bg-[#EBF5F7]">
-      <div className="relative z-10 w-full px-4">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
-            Apa kata mereka??
+    <section className="relative py-24 overflow-hidden bg-transparent">
+      <div className="relative z-10 w-full">
+        {/* Header Tetap Sama */}
+        <div className="text-center mb-16 px-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Apa kata Pengguna??
           </h2>
-          <p className="text-gray-600 text-sm md:text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-600 max-w-2xl mx-auto">
             Nggak perlu pusing lagi ngatur jadwal. Yuk, intip pengalaman seru para pengguna yang sudah membuktikan kemudahan MiTask.
           </p>
         </div>
 
-        {/* Outer Container (The Window) */}
-        <div className="flex overflow-hidden group">
-          {/* Inner Moving Container */}
-          <div className="animate-infinite-scroll flex gap-8">
+        {/* Carousel */}
+        <div className="flex overflow-hidden relative">
+          <div className="animate-infinite-scroll flex gap-8 py-4">
             {duplicatedData.map((item, index) => (
-              <div key={index} className="flex-shrink-0 w-[300px] md:w-[400px]">
+              <div key={index} className="flex-shrink-0 w-[320px] md:w-[420px]">
                 <TestimonialCard 
                   name={item.name}
                   role={item.role}

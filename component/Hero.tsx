@@ -44,7 +44,7 @@ export default function Hero() {
           {/* TUNTASKAN */}
           <div className="flex items-center gap-6 translate-x-8 md:translate-x-16">
             <div className="bg-white p-2 rounded-lg shadow-sm border-2 border-blue-100">
-               <Image src="/icons/tuntaskan.svg" alt="task" width={45} height={45} />
+               <Image src="/icons/tuntaskan.svg" alt="task" width={45} height={45} className="w-16 h-auto" />
             </div>
             <h1 className="text-3xl md:text-6xl font-black tracking-tight">
               Tun<span className="text-blue-600">Task</span>an.

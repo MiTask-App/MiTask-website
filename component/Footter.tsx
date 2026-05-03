@@ -32,10 +32,8 @@ export default function Footer() {
 
           {/* Links term & privacy */}
           <div className="flex items-center gap-8 text-sm font-medium">
-            <p className="hover:text-gray-300 transition-colors">
-              Term
-            </p>
-            <Link href="https://github.com/MiTask-App/MiTask-privacy-policy/blob/main/index.md" className="hover:text-gray-300 transition-colors">
+            <Link href="/Term">Term</Link>
+            <Link href="/Privacy" className="hover:text-gray-300 transition-colors">
               Privacy
             </Link>
           </div>

@@ -14,7 +14,7 @@ export default function Navbar() {
           
           {/* LOGO */}
           <div className="flex items-center gap-2 shrink-0">
-            <Image src="/logo (2).svg" alt="MiTask Logo" width={32} height={32} />
+            <Image src="/logo (2).svg" alt="MiTask Logo" width={32} height={32} className='w-8 h-auto' />
             <span className="font-bold text-lg text-blue-600">MiTask</span>
           </div>
 
@@ -27,7 +27,7 @@ export default function Navbar() {
               href="/login"
               className="bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition"
             >
-              Login
+              Masuk
             </Link>
           </div>
 
@@ -58,7 +58,7 @@ export default function Navbar() {
               href="/login"
               className="bg-blue-600 text-white py-3 rounded-xl font-bold"
             >
-              Login
+              Masuk
             </Link>
           </div>
         </div>
