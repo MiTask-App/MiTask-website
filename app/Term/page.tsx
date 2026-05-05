@@ -16,7 +16,7 @@ export default function TermsPage() {
               alt="MiTask Logo" 
               width={30} 
               height={30} 
-              className="w-8 h-8"
+              className="w-8 h-auto"
             />
             <span className="text-[#4F75FF] font-bold text-xl tracking-tight">MiTask</span>
           </div>
