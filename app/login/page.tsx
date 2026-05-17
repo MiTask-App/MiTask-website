@@ -16,7 +16,8 @@ export default function LoginPage() {
     setLoading(true)
     setError('')
 
-    const { error } = await supabase.auth.signInWithPassword({
+    // Login ke Supabase
+    const { data, error } = await supabase.auth.signInWithPassword({
       email,
       password,
     })
@@ -27,7 +28,22 @@ export default function LoginPage() {
       return
     }
 
-    router.push('/dashboard')
+    // Cek role ke Laravel
+    const res = await fetch(`${process.env.NEXT_PUBLIC_LARAVEL_URL}/api/user/role`, {
+      headers: {
+        Authorization: `Bearer ${data.session.access_token}`,
+      },
+    })
+
+    const json = await res.json()
+    const role = json.role
+
+    // Redirect berdasarkan role
+    if (role === 'admin') {
+      router.push('/admin')
+    } else {
+      router.push('/dashboard')
+    }
   }
 
   return (
