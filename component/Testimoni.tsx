@@ -5,14 +5,44 @@ const data = [
     name: "Anin",
     role: "Mahasiswa Teknik Informatika",
     content: "App nya bagus sekali, fiturnya sangat membantu hidup saya",
-    image: "/anin.jpeg" 
+    image: "/Anin.svg" 
   },
   {
     name: "Egy",
     role: "Mahasiswa Teknik Informatika",
-    content: "App nya bagus sekali, fiturnya sangat membantu saya",
-    image: "/egy.jpeg" 
+    content: "Keren banget, saya jadi lebih produktif dan nggak pernah lupa tugas lagi!",
+    image: "/Egy.svg" 
   },
+  {
+    name: "Dewi",
+    role: "Mahasiswa Teknik Informatika",
+    content: "Saya sangat menikmati penggunaan MiTask. Membantu saya mengatur waktu dengan lebih baik.",
+    image: "/Dewi.svg"
+  },
+  {
+    name: "Akbar",
+    role: "Mahasiswa Teknik Informatika",
+    content: "Firtur custom notifikasi nya sangat membantu saya untuk tetap fokus pada tugas yang penting.",
+    image: "/Akbar.svg"
+  },
+  {
+    name: "Galih",
+    role: "Mahasiswa Teknik Informatika",
+    content: "Saya jadi lebih mudah mengatur jadwal dan prioritas tugas dengan MiTask.",
+    image: "/Galih.svg"
+  },
+  {
+    name: "Zulfi",
+    role: "Mahasiswa Teknik Informatika",
+    content: "Dengan MiTask, saya bisa mengatur jadwal dengan lebih efisien dan tidak pernah melewatkan deadline lagi.",
+    image: "/Zulfi.svg"
+  },
+  {
+    name: "Dira",
+    role: "Mahasiswa Teknik Informatika",
+    content: "MiTask sangat membantu saya dalam mengatur jadwal dan prioritas tugas.",
+    image: "/Dira.svg"
+  }
 ];
 
 export default function TestimonialSection() {
