@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function TermsPage() {
   return (
-    <div className="min-h-screen bg-[#F8FAFC] p-4 md:p-8">
+    <div className="min-h-screen bg-[#CEDEFF] p-4 md:p-8">
       <div className="max-w-4xl mx-auto space-y-6">
         
         {/* HEADER CAPSULE */}
@@ -23,7 +23,7 @@ export default function TermsPage() {
           
          <Link
               href="/"
-              className="bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition"
+              className="text-blue-600 px-6 py-2 text-sm font-semibold"
             >
               Kembali
             </Link>
