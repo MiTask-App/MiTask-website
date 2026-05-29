@@ -28,7 +28,6 @@ export default function AdminPage() {
   const [loading, setLoading] = useState(true)
   const [activeTab, setActiveTab] = useState<'users' | 'tasks'>('users')
   const [token, setToken] = useState('')
-  const [sendingWarning, setSendingWarning] = useState<string | null>(null)
 
   useEffect(() => {
     const init = async () => {
@@ -111,37 +110,6 @@ export default function AdminPage() {
       await fetchUsers(token)
     } else {
       alert('Gagal mengubah akses user!')
-    }
-  }
-
-  const handleSendWarning = async (userId: string, username: string) => {
-    if (!confirm(`Kirim peringatan ke user "${username}"?`)) return
-
-    setSendingWarning(userId)
-
-    try {
-      const res = await fetch(
-        `${process.env.NEXT_PUBLIC_LARAVEL_URL}/api/admin/users/${userId}/send-warning`,
-        {
-          method: 'POST',
-          headers: {
-            Authorization: `Bearer ${token}`,
-            'Content-Type': 'application/json',
-          },
-        }
-      )
-
-      const json = await res.json()
-
-      if (json.success) {
-        alert(`✅ ${json.message}`)
-      } else {
-        alert(`❌ ${json.message}`)
-      }
-    } catch (err) {
-      alert('❌ Gagal menghubungi server. Pastikan Laravel sedang berjalan.')
-    } finally {
-      setSendingWarning(null)
     }
   }
 
@@ -234,37 +202,24 @@ export default function AdminPage() {
                       </span>
                     </div>
                     {user.role !== 'admin' && (
-                      <div className="flex flex-col gap-2 items-end">
-                        <div className="flex gap-2">
-                          <button
-                            onClick={() => handleToggleAccess(user.id, true)}
-                            className="bg-green-100 text-green-700 px-3 py-1 rounded-lg text-xs hover:bg-green-200"
-                          >
-                            Pulihkan
-                          </button>
-                          <button
-                            onClick={() => handleToggleAccess(user.id, false)}
-                            className="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-lg text-xs hover:bg-yellow-200"
-                          >
-                            Nonaktifkan
-                          </button>
-                          <button
-                            onClick={() => handleDeleteUser(user.id)}
-                            className="bg-red-100 text-red-700 px-3 py-1 rounded-lg text-xs hover:bg-red-200"
-                          >
-                            Hapus
-                          </button>
-                        </div>
+                      <div className="flex gap-2">
                         <button
-                          onClick={() => handleSendWarning(user.id, user.username || 'User')}
-                          disabled={sendingWarning === user.id}
-                          className={`px-3 py-1 rounded-lg text-xs font-medium w-full text-center ${
-                            sendingWarning === user.id
-                              ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                              : 'bg-orange-100 text-orange-700 hover:bg-orange-200'
-                          }`}
+                          onClick={() => handleToggleAccess(user.id, true)}
+                          className="bg-green-100 text-green-700 px-3 py-1 rounded-lg text-xs hover:bg-green-200"
                         >
-                          {sendingWarning === user.id ? '⏳ Mengirim...' : '⚠️ Kirim Peringatan'}
+                          Pulihkan
+                        </button>
+                        <button
+                          onClick={() => handleToggleAccess(user.id, false)}
+                          className="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-lg text-xs hover:bg-yellow-200"
+                        >
+                          Nonaktifkan
+                        </button>
+                        <button
+                          onClick={() => handleDeleteUser(user.id)}
+                          className="bg-red-100 text-red-700 px-3 py-1 rounded-lg text-xs hover:bg-red-200"
+                        >
+                          Hapus
                         </button>
                       </div>
                     )}

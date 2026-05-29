@@ -7,19 +7,19 @@ const featureData = [
     id: 1,
     title: "Prioritaskan Tugas yang Paling Mendesak",
     desc: "MiTask secara cerdas mengatur jadwalmu, menempatkan deadline paling mendesak diurutan teratas.",
-    image: "/FiturPriority.svg",
+    image: "/FiturPriority.webp",
   },
   {
     id: 2,
     title: "Atur Notifikasi Sesuai Kebutuhanmu",
     desc: "Atur notifikasi sesuai preferensimu, pilih pengingat yang kamu butuhkan dan aktifkan atau nonaktikfkan kapan saja tanpa gangguan.",
-    image: "/FiturNotif.svg", 
+    image: "/FiturNotif.webp", 
   },
   {
     id: 3,
     title: "Kalender Prioritasi Tugas",
     desc: "Lihat semua tugasmu dalam satu tampilan kalender yang intuitif, dengan penandaan warna untuk deadline yang mendekat.",
-    image: "/FiturCalendar.svg", 
+    image: "/FiturCalendar.webp", 
   }
 ];
 

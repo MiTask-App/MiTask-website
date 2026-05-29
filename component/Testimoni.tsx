@@ -5,43 +5,43 @@ const data = [
     name: "Anin",
     role: "Mahasiswa Teknik Informatika",
     content: "App nya bagus sekali, fiturnya sangat membantu hidup saya",
-    image: "/Anin.svg" 
+    image: "/Anin.webp" 
   },
   {
     name: "Egy",
     role: "Mahasiswa Teknik Informatika",
     content: "Keren banget, saya jadi lebih produktif dan nggak pernah lupa tugas lagi!",
-    image: "/Egy.svg" 
+    image: "/Egy.webp" 
   },
   {
     name: "Dewi",
     role: "Mahasiswa Teknik Informatika",
     content: "Saya sangat menikmati penggunaan MiTask. Membantu saya mengatur waktu dengan lebih baik.",
-    image: "/Dewi.svg"
+    image: "/Dewi.webp"
   },
   {
     name: "Akbar",
     role: "Mahasiswa Teknik Informatika",
     content: "Firtur custom notifikasi nya sangat membantu saya untuk tetap fokus pada tugas yang penting.",
-    image: "/Akbar.svg"
+    image: "/Akbar.webp"
   },
   {
     name: "Galih",
     role: "Mahasiswa Teknik Informatika",
     content: "Saya jadi lebih mudah mengatur jadwal dan prioritas tugas dengan MiTask.",
-    image: "/Galih.svg"
+    image: "/Galih.webp"
   },
   {
     name: "Zulfi",
     role: "Mahasiswa Teknik Informatika",
     content: "Dengan MiTask, saya bisa mengatur jadwal dengan lebih efisien dan tidak pernah melewatkan deadline lagi.",
-    image: "/Zulfi.svg"
+    image: "/Zulfi.webp"
   },
   {
     name: "Dira",
     role: "Mahasiswa Teknik Informatika",
     content: "MiTask sangat membantu saya dalam mengatur jadwal dan prioritas tugas.",
-    image: "/Dira.svg"
+    image: "/Dira.webp"
   }
 ];
 

@@ -7,13 +7,13 @@ export default function Hero() {
       
       {/* BACKGROUND BLOB KIRI */}
       <img
-        src="/blob_kiri.svg"
+        src="/blob_kiri.webp"
         className="absolute bottom-0 left-0 w-[45%] max-w-[300px] pointer-events-none select-none z-10 mt-20"
       />
 
       {/* BACKGROUND BLOB KANAN */}
       <img
-        src="/blob_kanan.svg"
+        src="/blob_kanan.webp"
         className="absolute top-0 right-0 w-[45%] max-w-[300px] pointer-events-none select-none z-10"
       />
 
