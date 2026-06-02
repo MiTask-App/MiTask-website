@@ -22,7 +22,8 @@ export default function Productivity() {
 
         <Link href="https://play.google.com/store/apps/details?id=com.mitask.app" target="_blank">
         <button className="mt-4 flex items-center gap-2 bg-[#5A81FA] text-black px-4 py-2 rounded-lg shadow-md">
-          <img src="/icons/playstore.webp" alt="playstore" /> Play Store
+          <img src="/icons/playstore.svg" alt="playstore" /> 
+          <span>Play Store</span>
         </button>
         </Link>
       </div>

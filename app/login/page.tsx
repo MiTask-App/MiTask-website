@@ -60,7 +60,7 @@ export default function LoginPage() {
           <div>
             <h3 className="text-sm font-bold text-blue-900">Pemberitahuan</h3>
             <p className="text-xs text-blue-700 leading-relaxed mt-1">
-              Dashboard ini khusus untuk pengguna terdaftar. Pastikan kamu sudah membuat akun melalui **aplikasi mobile MiTask** sebelum mencoba masuk.
+              Dashboard ini khusus untuk pengguna terdaftar. Pastikan kamu sudah membuat akun melalui 'Aplikasi MiTask' sebelum mencoba masuk.
             </p>
           </div>
         </div>
