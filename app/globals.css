@@ -6,7 +6,6 @@ body {
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
   overflow-y: auto;
 }
 
@@ -24,4 +23,8 @@ html {
 /* Pause saat mouse diletakkan di atas kartu */
 .animate-infinite-scroll:hover {
   animation-play-state: paused;
+}
+
+.admin-page {
+  overflow-x: auto;
 }
