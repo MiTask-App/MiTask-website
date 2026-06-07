@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${googleSans.className} antialiased`}
-        style={{ backgroundImage: "url('/pattern.svg')", backgroundRepeat: 'repeat', backgroundSize: '600px' }}
+        style={{ backgroundImage: "url('/pattern.webp')", backgroundRepeat: 'repeat', backgroundSize: '600px' }}
       >
         {children}
       </body>

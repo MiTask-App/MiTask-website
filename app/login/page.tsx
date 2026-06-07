@@ -16,7 +16,8 @@ export default function LoginPage() {
     setLoading(true)
     setError('')
 
-    const { error } = await supabase.auth.signInWithPassword({
+    // Login ke Supabase
+    const { data, error } = await supabase.auth.signInWithPassword({
       email,
       password,
     })
@@ -27,7 +28,22 @@ export default function LoginPage() {
       return
     }
 
-    router.push('/dashboard')
+    // Cek role ke Laravel
+    const res = await fetch(`${process.env.NEXT_PUBLIC_LARAVEL_URL}/api/user/role`, {
+      headers: {
+        Authorization: `Bearer ${data.session.access_token}`,
+      },
+    })
+
+    const json = await res.json()
+    const role = json.role
+
+    // Redirect berdasarkan role
+    if (role === 'admin') {
+      router.push('/admin/dashboard')
+    } else {
+      router.push('/dashboard')
+    }
   }
 
   return (
@@ -44,7 +60,7 @@ export default function LoginPage() {
           <div>
             <h3 className="text-sm font-bold text-blue-900">Pemberitahuan</h3>
             <p className="text-xs text-blue-700 leading-relaxed mt-1">
-              Dashboard ini khusus untuk pengguna terdaftar. Pastikan kamu sudah membuat akun melalui **aplikasi mobile MiTask** sebelum mencoba masuk.
+              Dashboard ini khusus untuk pengguna terdaftar. Pastikan kamu sudah membuat akun melalui 'Aplikasi MiTask' sebelum mencoba masuk.
             </p>
           </div>
         </div>
