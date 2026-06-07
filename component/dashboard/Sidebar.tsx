@@ -73,7 +73,7 @@ export default function Sidebar({ currentTab, setCurrentTab, onLogout, isOpen, s
       {/* Top Navbar khusus untuk Mobile Screen */}
       <div className="md:hidden flex items-center justify-between p-4 bg-white border-b border-gray-100 sticky top-0 z-50">
         <div className="flex items-center gap-2">
-          <Image src="/logo (2).svg" alt="MiTask" width={28} height={28} className="w-auto h-auto" />
+          <Image src="/logo (2).svg" alt="MiTask" width={28} height={28} className="w-8 h-auto" />
           <span className="font-bold text-blue-600 text-lg">MiTask</span>
         </div>
         <button onClick={() => setIsOpen(!isOpen)} className="p-2 text-gray-700 bg-gray-50 rounded-xl transition-colors active:bg-gray-100">
